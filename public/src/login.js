@@ -1,10 +1,10 @@
 define(["jquery"],function ($){
     $("form").on("submit",function (){
-        var  FormData=$(this).serialize();
+        var  formData=$(this).serialize();
         $.ajax({
             url:"/api/employee/employeeLogin",
             type:"post",
-            data:FormData,
+            data:formData,
             success:function (info){
                 if(info.error){
                    return alert(info.message);
